@@ -1,0 +1,40 @@
+.ester-card-preview { width: min(420px,calc(100% - 44px)); margin: 0 auto; padding: 10px 0 22px; color: #fff; }
+.ester-card-preview { display: grid; gap: 38px; }
+.ester-card-entry { opacity: 0; transform: perspective(1200px) translateX(-25px) rotateY(-84deg); transform-origin: center; transition: transform 2.2s cubic-bezier(.45,.05,.2,1),opacity 1.6s ease; backface-visibility: hidden; }
+.ester-card-entry.is-visible,.ester-card-entry:focus-within { opacity: 1; transform: perspective(1200px) translateX(0) rotateY(0); }
+.ester-card-entry.instant-entry { transition: none; }
+.ester-lash-card { position: relative; isolation: isolate; padding: 24px; border-radius: 24px; border: 1px solid #ffd6eeaf; background: radial-gradient(ellipse at 90% 12%,#ffb0da77,transparent 60%),linear-gradient(130deg,#fa73b9 0%,#ec3295 45%,#b90969 100%); box-shadow: inset 0 2px 1px #fff8,inset 0 -2px 1px #8b004266,0 7px 0 -2px #a50b60,0 9px 0 -2px #ff9acd88,0 20px 32px -10px #79003c77; animation: pink-card-float 3s ease-in-out infinite; transition: border-color .3s,box-shadow .3s; }
+.ester-lash-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; opacity: .7; pointer-events: none; background: url('/images/card-glitter.png') center / 300px 300px repeat; }
+.ester-lash-card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; pointer-events: none; background: linear-gradient(120deg,#fff2,transparent 35%,transparent 65%,#ffb3de19); }
+.ester-lash-card__body { position: relative; z-index: 2; width: 65%; }
+.ester-lash-card h3 { font-family: "Cormorant Garamond",Georgia,serif; font-size: 35px; line-height: .95; font-weight: 500; letter-spacing: -.025em; margin: 0 0 22px; text-shadow: 0 1px 3px #a8004233; }
+.ester-lash-card__prices { display: flex; gap: 23px; }
+.ester-lash-card__prices span { display: block; font-size: 9px; color: #fff0f7; margin-bottom: 3px; }
+.ester-lash-card__prices strong { font-size: 23px; font-weight: 500; letter-spacing: -.045em; white-space: nowrap; }
+.ester-lash-card__period { font-size: 9px; margin: 12px 0 19px; line-height: 1.6; color: #fff0f7; }
+.ester-lash-card__art { position: absolute; z-index: 1; right: -12px; top: 34px; width: 148px; height: 128px; display: grid; place-items: center; pointer-events: none; }
+.ester-lash-card__art::before { content: ""; position: absolute; inset: 4% -2% 3%; background: radial-gradient(ellipse,#ffd1e799,transparent 67%); }
+.ester-lash-card__art img { width: 170px; max-width: none; transform: rotate(-35deg); filter: drop-shadow(4px 12px 6px #74003666) drop-shadow(-1px -2px 1px #ffaada66); animation: pink-lash-float 4s ease-in-out infinite; }
+.ester-lash-card__art i { position: absolute; width: 12px; height: 12px; background: #fff9fc; clip-path: polygon(50% 0,59% 40%,100% 50%,59% 60%,50% 100%,41% 60%,0 50%,41% 40%); }
+.ester-lash-card__art i:nth-of-type(1) { top: 14%; right: 10%; width: 16px; height: 16px; }
+.ester-lash-card__art i:nth-of-type(2) { bottom: 9%; left: 25%; width: 8px; height: 8px; }
+.ester-lash-card__art i:nth-of-type(3) { bottom: 26%; right: 3%; }
+.ester-lash-card__cta { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 11px 16px; border-radius: 12px; border: 1px solid #fff9; background: linear-gradient(105deg,#fff4fa,#ffd5eb); color: #97104e; font-size: 12px; font-weight: 500; box-shadow: inset 0 1px 0 white,0 3px 8px #89003e22; text-decoration: none; }
+.ester-lash-card__cta:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
+.ester-lash-card:hover,.ester-lash-card:focus-within { animation-play-state: paused; border-color: #fff; }
+.ester-lash-card .ester-lash-card__art { right: 8px; }
+.ester-lash-card--brow h3 { font-size: 30px; }
+.ester-lash-card .ester-lash-card__art--brow { right: 0; top: 48px; width: 124px; }
+.ester-lash-card__art--brow img { width: 136px; animation-name: pink-brow-float; transform: rotate(-26deg); }
+.ester-lash-card__art--brow i:nth-of-type(1) { top: 27%; right: 9%; }
+.brow-catalog-section > .lash-services-heading { width: calc(100% - 40px); }
+@keyframes pink-brow-float { 0%,100% { transform: translateY(0) rotate(-26deg); } 50% { transform: translateY(-6px) rotate(-21deg); } }
+@media(max-width:640px) { .ester-lash-card--brow h3 { font-size: 28px; } .ester-lash-card .ester-lash-card__art--brow { right: -2px; width: 112px; } .ester-lash-card__art--brow img { width: 120px; } }
+@media(max-width:360px) { .ester-lash-card--brow h3 { font-size: 25px; } .ester-lash-card .ester-lash-card__art--brow { right: -4px; width: 96px; } .ester-lash-card__art--brow img { width: 100px; } }
+@keyframes pink-card-float { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-7px) scale(1.015); } }
+@keyframes pink-lash-float { 0%,100% { transform: translateY(0) rotate(-35deg); } 50% { transform: translateY(-6px) rotate(-30deg); } }
+@media(max-width:640px) { .ester-lash-card { padding: 22px; } .ester-lash-card h3 { font-size: 33px; } .ester-lash-card__prices { gap: 19px; } .ester-lash-card__art { right: -8px; top: 32px; width: 126px; height: 125px; } .ester-lash-card__art img { width: 145px; } .ester-card-entry { transform: perspective(1200px) translateX(-20px) rotateY(-84deg); } .ester-card-entry.is-visible,.ester-card-entry:focus-within { transform: perspective(1200px) translateX(0) rotateY(0); } }
+@media(max-width:360px) { .ester-card-preview { width: calc(100% - 40px); } .ester-lash-card { padding: 19px; } .ester-lash-card h3 { font-size: 30px; } .ester-lash-card__prices { gap: 13px; } .ester-lash-card__prices strong { font-size: 21px; } .ester-lash-card__art { right: -13px; width: 110px; } .ester-lash-card__art img { width: 125px; } }
+@media(prefers-reduced-motion:reduce) { .ester-card-entry { opacity: 1; transform: none!important; transition: none; } .ester-lash-card,.ester-lash-card__art img { animation: none; } }
+@media(max-width:640px) { .ester-lash-card--brow h3 { font-size: 28px; } .ester-lash-card__art--brow img { width: 120px; } }
+@media(max-width:360px) { .ester-lash-card--brow h3 { font-size: 25px; } .ester-lash-card__art--brow img { width: 100px; } }

@@ -1,0 +1,78 @@
+.booking-info {
+  padding: 0 0 100px;
+  color: #fff8fc;
+}
+
+.booking-info__title { margin: 0 0 48px; }
+
+.booking-info__layout {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: clamp(40px, 7vw, 100px);
+  align-items: start;
+}
+
+.booking-info__intro { padding-top: 24px; }
+
+.booking-info__intro h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(44px, 4.6vw, 64px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin: 24px 0;
+}
+
+.booking-info__intro h3 em {
+  color: #ffe1ef;
+  text-shadow: 0 0 14px #ffd0e740;
+}
+
+.booking-info__intro p {
+  max-width: 310px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #ffe1ef;
+  margin: 0;
+}
+
+.booking-info__list { margin: 0; padding: 0; list-style: none; }
+
+.booking-info__list li {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 18px;
+  padding: 24px 0;
+  border-top: 1px solid #ffd6eb55;
+}
+
+.booking-info__number {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  line-height: 1;
+  color: #ffe1ef;
+}
+
+.booking-info__list h4 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0 0 9px;
+}
+
+.booking-info__list p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #ffe1ef;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .booking-info { padding-bottom: 96px; }
+  .booking-info__title { margin-bottom: 28px; }
+  .booking-info__layout { grid-template-columns: 1fr; gap: 32px; }
+  .booking-info__intro { padding-top: 0; }
+  .booking-info__intro h3 { font-size: 46px; margin: 18px 0; }
+  .booking-info__intro p { max-width: 340px; }
+  .booking-info__list li { grid-template-columns: 30px 1fr; gap: 12px; padding: 22px 0; }
+}

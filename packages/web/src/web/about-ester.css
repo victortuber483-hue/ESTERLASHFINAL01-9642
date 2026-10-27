@@ -1,0 +1,100 @@
+.about-ester {
+  position: relative;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  column-gap: clamp(40px, 7vw, 100px);
+  padding: 16px 0 110px;
+  color: #fff8fc;
+}
+
+.about-ester__section-title {
+  grid-column: 1 / -1;
+  margin: 0 0 48px;
+}
+
+.about-ester__heading {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: end;
+}
+
+.about-ester__heading h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(52px, 5.5vw, 76px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  margin: 22px 0 28px;
+}
+
+.about-ester__heading h3 em {
+  color: #fff3fa;
+  text-shadow: 0 0 14px #ffd0e780;
+}
+
+.about-ester__name {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.name-glitter-orbit {
+  display: block;
+  position: absolute;
+  inset: -26px;
+  width: calc(100% + 52px);
+  height: calc(100% + 52px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-ester__visual {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+  align-self: center;
+  width: min(100%, 390px);
+  margin-inline: auto;
+}
+
+.about-ester__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.about-ester__caption {
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.about-ester__copy {
+  grid-column: 2;
+  grid-row: 3;
+  align-self: start;
+}
+
+.about-ester__copy p {
+  max-width: 470px;
+  font-size: 14px;
+  line-height: 1.95;
+  color: #ffe1ef;
+  margin: 0 0 20px;
+}
+
+.about-ester__copy p:last-child { margin-bottom: 0; }
+
+@media (max-width: 640px) {
+  .about-ester {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 10px 0 90px;
+  }
+  .about-ester__heading { align-self: stretch; text-align: center; }
+  .about-ester__section-title { margin: 0 0 10px; }
+  .about-ester__heading h3 { font-size: clamp(44px, 12vw, 56px); margin: 18px 0 0; }
+  .about-ester__visual { width: min(100%, 340px); }
+  .about-ester__copy { align-self: stretch; }
+  .about-ester__copy p { max-width: none; font-size: 13px; line-height: 1.9; }
+}

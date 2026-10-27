@@ -1,0 +1,25 @@
+.lash-editorial { position: relative; isolation: isolate; width: min(540px,calc(100% - 94px)); margin: 12px auto 0; }
+.lash-editorial::before { content: ""; position: absolute; inset: 16% -18% -8%; z-index: -1; pointer-events: none; background: radial-gradient(ellipse,#ffb4de40,transparent 66%); filter: blur(24px); }
+.heart-clip-definition { position: absolute; pointer-events: none; }
+.lash-editorial__frame { position: relative; aspect-ratio: 1 / 1; filter: drop-shadow(0 0 2px #fff5fc) drop-shadow(0 0 10px #ffd2ed55) drop-shadow(0 15px 24px #8700373b); }
+.lash-editorial__photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 62% 44%; clip-path: url(#editorial-heart); }
+.lash-editorial__tint { position: absolute; inset: 0; clip-path: url(#editorial-heart); background: linear-gradient(180deg,transparent 72%,#ed16843b 94%,#ec22896e); pointer-events: none; }
+.lash-editorial__heart-edge { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.lash-editorial__tools { position: absolute; inset: 0; pointer-events: none; }
+.lash-editorial__tools img { position: absolute; height: auto; filter: drop-shadow(5px 12px 5px #65002e55) drop-shadow(0 0 2px #ffd5e97a); }
+.lash-editorial__tweezers { width: 124px; left: -24px; bottom: 23%; rotate: 14deg; }
+.lash-editorial__spoolie { width: 240px; right: -78px; top: 26%; rotate: -69deg; }
+.lash-editorial__lash { width: 164px; right: 40px; bottom: 10%; rotate: -22deg; }
+.editorial-spark { position: absolute; background: #fff7fc; width: 14px; height: 14px; clip-path: polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%); }
+.editorial-spark--one { left: 11%; bottom: 42%; width: 19px; height: 19px; }
+.editorial-spark--two { left: 35%; bottom: 16%; }
+.editorial-spark--three { right: 5%; top: 16%; width: 19px; height: 19px; }
+.editorial-spark--four { right: 36%; bottom: 15%; width: 10px; height: 10px; }
+.lash-services-heading { margin: 88px auto 29px; text-align: center; font-family: "Cormorant Garamond",Georgia,serif; font-weight: 500; font-size: 52px; line-height: 1.1; letter-spacing: -.025em; color: #fff7fc; }
+@media(max-width:640px) {
+  .lash-editorial { margin-top: 12px; }
+  .lash-editorial__tweezers { width: 82px; left: -14px; bottom: 23%; }
+  .lash-editorial__spoolie { width: 165px; right: -54px; top: 27%; }
+  .lash-editorial__lash { width: 115px; right: 15px; bottom: 10%; }
+  .lash-services-heading { font-size: 44px; margin-top: 68px; margin-bottom: 23px; }
+}

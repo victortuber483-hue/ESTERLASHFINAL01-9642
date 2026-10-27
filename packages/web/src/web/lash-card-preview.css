@@ -1,0 +1,24 @@
+.ester-card-preview { width: min(460px,calc(100% - 40px)); margin: 0 auto; padding: 0 0 18px; color: #fff7fc; }
+.ester-card-entry { opacity: 0; transform: perspective(1200px) translateX(-30px) rotateY(-84deg); transition: transform 2.2s cubic-bezier(.45,.05,.2,1),opacity 1.6s ease; transform-origin: center; backface-visibility: hidden; }
+.ester-card-entry.is-visible,.ester-card-entry:focus-within { opacity: 1; transform: perspective(1200px) translateX(0) rotateY(0); }
+.ester-lash-card { position: relative; isolation: isolate; padding: 30px; border: 1px solid #ffa8d66b; border-radius: 24px; background: radial-gradient(ellipse at 0 0,#ce3e8647,transparent 65%),linear-gradient(120deg,#50102f 0%,#260a1a 54%,#70143f 100%); box-shadow: inset 0 1px 1px #ffffff20,0 16px 32px #67002c30; animation: ester-lash-float 3s ease-in-out infinite; transition: border-color .3s,box-shadow .3s; }
+.ester-lash-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; background: linear-gradient(125deg,#fff1,transparent 38%,transparent 70%,#ff7ebb0a); }
+.ester-lash-card__heading { display: flex; gap: 18px; align-items: center; margin-bottom: 27px; }
+.ester-lash-card__icon { position: relative; display: grid; place-items: center; width: 61px; height: 61px; flex-shrink: 0; border-radius: 16px; border: 1px solid #ffa1d590; background: radial-gradient(ellipse at 95% 0%,#ffd3de88,transparent 55%),linear-gradient(135deg,#c2478c,#4e1433 65%,#a8326a); box-shadow: inset 2px 2px 4px #ffc2e466,inset -2px -2px 3px #ffacd333,0 0 18px #ff76c032; animation: ester-icon-float 4s ease-in-out infinite; }
+.ester-lash-card__icon svg { width: 32px; height: 32px; color: #ffd4ea; filter: drop-shadow(0 2px 2px #31071b); }
+.ester-lash-card__category { display: block; font-size: 8px; font-weight: 500; letter-spacing: .19em; color: #e9adc9; line-height: 1.5; margin-bottom: 8px; }
+.ester-lash-card h3 { font-family: "Cormorant Garamond",Georgia,serif; font-size: 31px; font-weight: 500; letter-spacing: -.025em; line-height: 1.05; margin: 0; }
+.ester-lash-card__prices { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid #ffd5eb24; padding-top: 23px; }
+.ester-lash-card__prices > div + div { border-left: 1px solid #ffd5eb24; padding-left: 22px; }
+.ester-lash-card__prices span { display: block; font-size: 11px; color: #eec2d7; margin-bottom: 5px; }
+.ester-lash-card__prices strong { display: block; font-size: 30px; font-weight: 500; letter-spacing: -.04em; }
+.ester-lash-card__period { margin: 17px 0 24px; font-size: 10px; color: #e1b3c9; line-height: 1.7; }
+.ester-lash-card__cta { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-radius: 13px; border: 1px solid #ffc7e44d; background: linear-gradient(110deg,#a02261,#dc428c); box-shadow: inset 0 1px 0 #fff2; font-size: 13px; font-weight: 500; text-decoration: none; color: white; transition: box-shadow .25s; }
+.ester-lash-card__cta:hover { box-shadow: inset 0 1px 0 #fff2,0 0 20px #ffaad740; }
+.ester-lash-card__cta:focus-visible { outline: 2px solid white; outline-offset: 5px; }
+.ester-lash-card:hover,.ester-lash-card:focus-within { animation-play-state: paused; border-color: #ffc7e4b0; box-shadow: inset 0 1px 1px #fff3,0 0 26px #ffa3d029; }
+@keyframes ester-lash-float { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-7px) scale(1.015); } }
+@keyframes ester-icon-float { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-6px) rotate(1deg); } }
+@media(max-width:640px) { .ester-lash-card { padding: 24px; } .ester-lash-card__heading { gap: 14px; } .ester-lash-card__icon { width: 54px; height: 54px; border-radius: 14px; } .ester-lash-card h3 { font-size: 29px; } .ester-card-entry { transform: perspective(1200px) translateX(-20px) rotateY(-84deg); } .ester-card-entry.is-visible,.ester-card-entry:focus-within { transform: perspective(1200px) translateX(0) rotateY(0); } }
+@media(max-width:360px) { .ester-lash-card { padding: 21px; } .ester-lash-card h3 { font-size: 26px; } .ester-lash-card__category { font-size: 7px; } .ester-lash-card__heading { gap: 12px; } }
+@media(prefers-reduced-motion:reduce) { .ester-card-entry { opacity: 1; transform: none!important; transition: none; } .ester-lash-card,.ester-lash-card__icon { animation: none; } }

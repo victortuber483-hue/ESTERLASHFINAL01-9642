@@ -1,0 +1,91 @@
+.site-footer {
+  position: relative;
+  padding: 58px 0 42px;
+  color: #fff8fc;
+  border-top: 1px solid #ffd6eb55;
+  background: linear-gradient(160deg, #700034f2, #290016fa);
+}
+
+.site-footer__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 44px;
+}
+
+.site-footer__name {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.site-footer__descriptor {
+  display: block;
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: .25em;
+}
+
+.site-footer__brand p {
+  margin: 20px 0 0;
+  color: #ffe1ef;
+  font-size: 12px;
+}
+
+.site-footer__contacts h2 {
+  margin: 0 0 20px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.site-footer__contacts a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  min-height: 44px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.site-footer__contacts a > svg:first-child { font-size: 20px; }
+.site-footer__contacts a > svg:last-child { margin-left: 10px; }
+
+.site-footer__credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding-top: 32px;
+  border-top: 1px solid #ffd6eb33;
+  text-decoration: none;
+}
+
+.site-footer__credit img {
+  display: block;
+  width: 108px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.site-footer__credit-copy { display: grid; gap: 10px; font-size: 11px; line-height: 1.8; color: #ffe1ef; }
+.site-footer__credit-copy strong { color: #fff8fc; font-weight: 500; }
+.site-footer__credit-cta { display: flex; align-items: center; gap: 8px; width: fit-content; color: #fff8fc; border-bottom: 1px solid #ffd6eb70; padding-bottom: 3px; }
+.site-footer a { transition: color 180ms ease; }
+.site-footer a:hover { color: #ffc3e2; }
+.site-footer a:hover .site-footer__credit-cta { border-bottom-color: #fff8fc; }
+.site-footer a:focus-visible { outline: 2px solid #fff8fc; outline-offset: 6px; }
+
+@media (max-width: 640px) {
+  .site-footer { padding: 44px 0 108px; }
+  .site-footer__main { flex-direction: column; align-items: flex-start; gap: 36px; padding-bottom: 32px; }
+  .site-footer__name { font-size: 58px; }
+  .site-footer__contacts h2 { font-size: 27px; margin-bottom: 12px; }
+  .site-footer__credit { flex-direction: column; align-items: flex-start; gap: 20px; padding-top: 28px; }
+  .site-footer__credit img { width: 100px; }
+  .site-footer__credit-copy { font-size: 11px; }
+}
